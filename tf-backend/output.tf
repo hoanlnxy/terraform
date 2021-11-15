@@ -1,15 +1,15 @@
 output "bucket_name" {
-  value = "${aws_s3_bucket.terraform_state.id}"
+  value = "${module.tfbackend.bucket_name}"
 }
 
 output "bucket_arn" {
-  value = "${aws_s3_bucket.terraform_state.arn}"
+  value = "${module.tfbackend.bucket_arn}"
 }
 
 output "dynamodb_table" {
-  value = "${aws_dynamodb_table.terraform_lock.id}"
+  value = "${module.tfbackend.dynamodb_table}"
 }
 
 output "dynamodb_table_arn" {
-  value = "${aws_dynamodb_table.terraform_lock.arn}"
+  value = "${module.tfbackend.dynamodb_table_arn}"
 }

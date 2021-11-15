@@ -1,8 +1,8 @@
-aws_profile = "prd"
+aws_profile = "default"
 
-aws_account_id = "615061061714"
+aws_account_id = "100170189736"
 
-region = "us-east-1"
+region = "ap-southeast-1"
 
 bucket_name = "training-terraform-state"
 
