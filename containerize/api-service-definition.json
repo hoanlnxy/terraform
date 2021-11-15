@@ -1,0 +1,29 @@
+{
+    "cluster": "laravel-poc-cluster",
+    "serviceName": "laravel-ecs-service",
+    "taskDefinition": "laravel-ecs-task-definition:1",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:ap-southeast-1:062235833499:targetgroup/terraform-alb-target/985dc3772cde5ed6",
+            "containerName": "api",
+            "containerPort": 80
+        }
+    ],
+    "desiredCount": 1,
+    "launchType": "FARGATE",
+    "platformVersion": "1.4.0",
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-0e7059ed63932592a",
+		"subnet-0b408aec55fd3de18"
+            ],
+            "securityGroups": [
+                "sg-00e66dd918839a13f",
+		"sg-02459cafffe816e92"
+            ],
+            "assignPublicIp": "DISABLED"
+        }
+    },
+    "schedulingStrategy": "REPLICA"
+}
